@@ -1,0 +1,6 @@
+api/**/__pycache__
+train_model/dataset/circulos
+train_model/dataset/cuadrados
+train_model/dataset/hexagonos
+train_model/dataset/rectangulos
+train_model/dataset/triangulos

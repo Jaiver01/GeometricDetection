@@ -1,0 +1,4 @@
+tensorflow
+numpy
+tensorflow_hub
+cv2
