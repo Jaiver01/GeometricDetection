@@ -12,7 +12,7 @@ model = keras.models.load_model(
     custom_objects = { 'KerasLayer': hub.KerasLayer }
 )
 
-categories = ['Círculo', 'Cuadrado', 'Hexágono', 'Rectángulo', 'Triángulo']
+categories = ['Círculo', 'Cuadrado', 'Hexágono', 'Pentágono', 'Rectángulo', 'Triángulo']
 
 def classify(url):
     img = Image.open(url)

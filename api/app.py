@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify, Response
-from flask_pymongo import PyMongo
 from flask_cors import CORS
 import base64
 from classifier.classifier import classify

@@ -1,5 +1,6 @@
-const apiUrl = 'http://127.0.0.1:5000';
+const apiUrl = 'https://flask-production-16b4.up.railway.app';
 
+const loader = document.getElementById("loader");
 const result = document.getElementById("result");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -17,6 +18,8 @@ const predict = async () => {
 
     const request = { base64_img: img };
 
+    loader.classList.remove('d-none');
+
     const response = await fetch(apiUrl + '/classifier/geometric/predict', {
         method: "POST",
         cache: "no-cache",
@@ -27,6 +30,8 @@ const predict = async () => {
     });
 
     const data = await response.json();
+
+    loader.classList.add('d-none');
         
     console.log("Prediccion", data);
     result.innerHTML = data.prediction;

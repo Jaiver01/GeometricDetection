@@ -1,11 +1,10 @@
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-import numpy as np
 import tensorflow as tf
 import tensorflow_hub as hub
 
 MODEL_TFHUB_URL = 'https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4'
 DATASET_PATH = './dataset'
-NEURONS = 5
+NEURONS = 6
 EPOCH = 50
 
 # Create the dataset
@@ -51,4 +50,4 @@ historial = model.fit(
 )
 
 # Save the model
-model.save('./trained_model/geometric_classifier.h5')
+model.save('./../api/classifier/trained_model/geometric_classifier.h5')
